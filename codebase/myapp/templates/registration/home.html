@@ -1,0 +1,16 @@
+{% extends "registration/base.html" %}
+
+{% block content %}
+
+<!-- upload profile image -->
+<ul>
+  {% for profile in profiles%}
+  <li>
+    <a target="blank" href="user-profile/{{profile.id}}">{{profile}}</a>
+  </li>
+  {% endfor%}
+</ul>
+
+<a href={% url 'posts' %}>Add Post</a>
+
+{% endblock %}
